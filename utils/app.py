@@ -6,14 +6,18 @@ from config.database import engine, Base
 # Import Routers
 from routers import auth, products, orders, payments
 
-# Create tables (Note: For complex migrations with existing data, Alembic is recommended)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="E-commerce API", version="1.0.0")
 
+origins = [
+    "http://localhost:5173",
+    "https://your-frontend-project.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://frontend-gilt-alpha-61.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
