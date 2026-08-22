@@ -17,7 +17,11 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://frontend-gilt-alpha-61.vercel.app"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://frontend-gxkx.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
