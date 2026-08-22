@@ -12,7 +12,7 @@ app = FastAPI(title="E-commerce API", version="1.0.0")
 
 origins = [
     "http://localhost:5173",
-    "https://your-frontend-project.vercel.app",
+    "https://frontend-gxkx.vercel.app/",
 ]
 
 app.add_middleware(
